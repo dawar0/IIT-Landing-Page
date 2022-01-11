@@ -1,5 +1,6 @@
+import { date } from "../Date";
 export default function DateExtractor() {
-  const date1 = new Date("01/09/2022");
+  const date1 = new Date(date);
   const date2 = new Date();
   const diffTimeSigned = date2.getTime() - date1.getTime();
   const diffTime = Math.abs(diffTimeSigned);
