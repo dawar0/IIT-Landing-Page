@@ -1,29 +1,29 @@
 {
   "files": {
-    "main.css": "/static/css/main.3a5d59b1.css",
-    "main.js": "/static/js/main.28b81aaa.js",
-    "static/js/787.444fca95.chunk.js": "/static/js/787.444fca95.chunk.js",
-    "static/media/Background.png": "/static/media/Background.a5f96a89c1e777e8889c.png",
-    "static/media/ComprehensiveLearning.png": "/static/media/ComprehensiveLearning.f5686319dd8b0bef85a3.png",
-    "static/media/logo.png": "/static/media/logo.783266bdd3f640fdfee1.png",
-    "static/media/AlumniStatus.png": "/static/media/AlumniStatus.a89e129da5d77f0f2acb.png",
-    "static/media/RemoteLearning.png": "/static/media/RemoteLearning.aaeb873994fd252b98fa.png",
-    "static/media/FlexibleCurriculum.png": "/static/media/FlexibleCurriculum.590f0cad3fbb5813ad5b.png",
-    "static/media/BlendedLearning.png": "/static/media/BlendedLearning.2662c5589a969c8733d3.png",
-    "static/media/RobustPedagogy.png": "/static/media/RobustPedagogy.c298a4676db79ec9b5f6.png",
-    "static/media/FuturaBT.ttf": "/static/media/FuturaBT.dbbde3d53b68cf982647.ttf",
-    "static/media/personalInterview.png": "/static/media/personalInterview.ae6a8f3f9ff8ff700584.png",
-    "static/media/application.png": "/static/media/application.45e2b21a2ba69a8e329d.png",
-    "static/media/entrepreneurs.png": "/static/media/entrepreneurs.d104c52df0fe59481bd2.png",
-    "static/media/test.png": "/static/media/test.4a645d5908f02566fbf9.png",
-    "static/media/juniorExecutives.png": "/static/media/juniorExecutives.b7a8683b194f9e4e911f.png",
-    "index.html": "/index.html",
-    "main.3a5d59b1.css.map": "/static/css/main.3a5d59b1.css.map",
-    "main.28b81aaa.js.map": "/static/js/main.28b81aaa.js.map",
-    "787.444fca95.chunk.js.map": "/static/js/787.444fca95.chunk.js.map"
+    "main.css": "/IIT-Landing-Page/static/css/main.b7cf491f.css",
+    "main.js": "/IIT-Landing-Page/static/js/main.46677536.js",
+    "static/js/787.444fca95.chunk.js": "/IIT-Landing-Page/static/js/787.444fca95.chunk.js",
+    "static/media/Background.png": "/IIT-Landing-Page/static/media/Background.a5f96a89c1e777e8889c.png",
+    "static/media/ComprehensiveLearning.png": "/IIT-Landing-Page/static/media/ComprehensiveLearning.f5686319dd8b0bef85a3.png",
+    "static/media/logo.png": "/IIT-Landing-Page/static/media/logo.783266bdd3f640fdfee1.png",
+    "static/media/AlumniStatus.png": "/IIT-Landing-Page/static/media/AlumniStatus.a89e129da5d77f0f2acb.png",
+    "static/media/RemoteLearning.png": "/IIT-Landing-Page/static/media/RemoteLearning.aaeb873994fd252b98fa.png",
+    "static/media/FlexibleCurriculum.png": "/IIT-Landing-Page/static/media/FlexibleCurriculum.590f0cad3fbb5813ad5b.png",
+    "static/media/BlendedLearning.png": "/IIT-Landing-Page/static/media/BlendedLearning.2662c5589a969c8733d3.png",
+    "static/media/RobustPedagogy.png": "/IIT-Landing-Page/static/media/RobustPedagogy.c298a4676db79ec9b5f6.png",
+    "static/media/FuturaBT.ttf": "/IIT-Landing-Page/static/media/FuturaBT.dbbde3d53b68cf982647.ttf",
+    "static/media/personalInterview.png": "/IIT-Landing-Page/static/media/personalInterview.ae6a8f3f9ff8ff700584.png",
+    "static/media/application.png": "/IIT-Landing-Page/static/media/application.45e2b21a2ba69a8e329d.png",
+    "static/media/entrepreneurs.png": "/IIT-Landing-Page/static/media/entrepreneurs.d104c52df0fe59481bd2.png",
+    "static/media/test.png": "/IIT-Landing-Page/static/media/test.4a645d5908f02566fbf9.png",
+    "static/media/juniorExecutives.png": "/IIT-Landing-Page/static/media/juniorExecutives.b7a8683b194f9e4e911f.png",
+    "index.html": "/IIT-Landing-Page/index.html",
+    "main.b7cf491f.css.map": "/IIT-Landing-Page/static/css/main.b7cf491f.css.map",
+    "main.46677536.js.map": "/IIT-Landing-Page/static/js/main.46677536.js.map",
+    "787.444fca95.chunk.js.map": "/IIT-Landing-Page/static/js/787.444fca95.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3a5d59b1.css",
-    "static/js/main.28b81aaa.js"
+    "static/css/main.b7cf491f.css",
+    "static/js/main.46677536.js"
   ]
 }
