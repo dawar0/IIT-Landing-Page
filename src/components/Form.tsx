@@ -35,6 +35,15 @@ export default function Form({ open, setOpen }: FormInterface) {
     experience: null,
   };
   const [formObject, setFormObject] = React.useState(formObjectInitial);
+  const [emailValid, setEmailValid] = React.useState(true);
+  const [phoneValid, setPhoneValid] = React.useState(true);
+
+  function isNum(val: any) {
+    return !isNaN(val);
+  }
+  var validRegex =
+    /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+
   const handleSubmit = () => {
     let tempError: { [key: string]: any } = {};
     let flag = true;
@@ -44,10 +53,20 @@ export default function Form({ open, setOpen }: FormInterface) {
         flag = false;
       }
     }
+
     setErrorObject({ ...errorObject, ...tempError });
-    fetch(
-      "https://timestsw.com/wp-content/uploads/2021/11/IIM_Kashipur_EMBAA-Brochure.pdf"
-    );
+    if (!formObject["email"]?.match(validRegex)) {
+      flag = false;
+      tempError = { ...tempError, ...{ email: true } };
+      setEmailValid(false);
+      setErrorObject({ ...errorObject, ...tempError });
+    }
+    if (formObject.phone?.length !== 10 || !isNum(formObject.phone)) {
+      flag = false;
+      tempError = { ...tempError, ...{ phone: true } };
+      setPhoneValid(false);
+      setErrorObject({ ...errorObject, ...tempError });
+    }
     if (flag) {
       const requestOptions = {
         method: "POST",
@@ -60,6 +79,7 @@ export default function Form({ open, setOpen }: FormInterface) {
     }
     console.log(errorObject);
   };
+
   const handleChange = (e: any) => {
     const tempObject: { [key: string]: any } = {};
     const tempError: { [key: string]: any } = {};
@@ -68,7 +88,16 @@ export default function Form({ open, setOpen }: FormInterface) {
 
     tempObject[e.target.name] = e.target.value;
     setFormObject({ ...formObject, ...tempObject });
+
+    if (e.target.name === "email" && e.target.value?.match(validRegex)) {
+      setEmailValid(true);
+    }
+
+    if (e.target.name === "phone" && e.target.value?.length === 10) {
+      setPhoneValid(true);
+    }
   };
+
   const experience = [
     "<1 Years",
     "2-3 Years",
@@ -81,11 +110,9 @@ export default function Form({ open, setOpen }: FormInterface) {
     "9-10 Years",
     ">10 Years",
   ];
-
   React.useEffect(() => {
-    console.log(formObject);
-    console.log(errorObject);
-  }, [formObject, errorObject]);
+    console.log(formObject.phone?.length);
+  }, [formObject]);
   return (
     <Dialog open={open}>
       <Grid
@@ -135,6 +162,7 @@ export default function Form({ open, setOpen }: FormInterface) {
               variant="outlined"
               value={formObject?.email}
               error={errorObject.email}
+              helperText={emailValid ? "" : "Enter correct email"}
               fullWidth
               onChange={handleChange}
             />
@@ -144,9 +172,11 @@ export default function Form({ open, setOpen }: FormInterface) {
               autoComplete="tel-national"
               label="Phone Number"
               name="phone"
+              type="tel"
               value={formObject?.phone}
               error={errorObject.phone}
               onChange={handleChange}
+              helperText={phoneValid ? "" : "Enter a valid 10 digit mobile no."}
               variant="outlined"
               fullWidth
             />

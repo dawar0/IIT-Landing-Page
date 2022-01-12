@@ -80,7 +80,7 @@ export default function Header() {
             <Typography
               sx={{
                 fontFamily: "inherit",
-                color: colors.gray,
+                color: "#666666",
                 fontSize: "small",
                 py: 1,
                 px: matches ? 0 : 2,
