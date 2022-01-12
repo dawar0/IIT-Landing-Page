@@ -87,22 +87,34 @@ export default function Form({ open, setOpen }: FormInterface) {
     console.log(errorObject);
   }, [formObject, errorObject]);
   return (
-    <Dialog open={open} fullScreen>
-      <Grid container sx={{ display: "flex", justifyContent: "center" }}>
-        <Grid item xs={12}>
-          <Box sx={{ p: 1, justifyContent: "end ", display: "flex" }}>
+    <Dialog open={open}>
+      <Grid
+        container
+        sx={{ display: "flex", justifyContent: "center", pb: 2, px: 1, pt: 1 }}
+      >
+        <Grid
+          item
+          xs={12}
+          sx={{
+            display: "grid",
+            justifyItems: "center",
+            alignItems: "center",
+            width: "100%",
+          }}
+        >
+          <Box sx={{ justifySelf: "end" }}>
             <IconButton onClick={() => setOpen(false)}>
               <CloseIcon />
             </IconButton>
           </Box>
-        </Grid>
-        <Grid item xs={12} sx={{ p: 1 }}>
-          <Typography sx={{ textAlign: "center", fontFamily: "inherit" }}>
+          <Typography
+            sx={{ textAlign: "center", fontFamily: "inherit", px: 1 }}
+          >
             Submit the below details to get a brochure
           </Typography>
           <Typography sx={{ textAlign: "center" }}></Typography>
         </Grid>
-        <Grid item xs={10} lg={6} sx={{ justifySelf: "center" }}>
+        <Grid item xs={10} sx={{ justifySelf: "center" }}>
           <Box sx={{ p: 1 }}>
             <TextField
               label="Name"
