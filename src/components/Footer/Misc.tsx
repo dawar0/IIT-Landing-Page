@@ -49,7 +49,12 @@ export function Image(props: any) {
         <img src={src} alt={alt} style={{ width: 50 }} />
       </Box>
       <Typography
-        sx={{ textAlign: "center", fontSize: "small", fontFamily: "inherit" }}
+        sx={{
+          textAlign: "center",
+          fontSize: "small",
+          fontFamily: "inherit",
+          color: colors.gray,
+        }}
       >
         {alt}
       </Typography>

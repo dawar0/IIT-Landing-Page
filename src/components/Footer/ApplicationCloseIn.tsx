@@ -4,6 +4,8 @@ import { colors } from "../../assets/images/colors";
 import DateCalulator from "./DateCalculator";
 import Background from "../../assets/images/Background.png";
 import { Title, prependZero } from "./Misc";
+
+import { dateString } from "../Date";
 export default function EligibilityCriteria() {
   const matches = useMediaQuery("(min-width:600px)");
   const dateDifference = DateCalulator();
@@ -53,7 +55,7 @@ export default function EligibilityCriteria() {
           fontWeight: 600,
         }}
       >
-        Last Date to Apply: 9th Jan '22
+        Last Date to Apply: {dateString}
       </Typography>
       <Box
         sx={{

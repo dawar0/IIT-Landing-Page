@@ -72,7 +72,7 @@ export default function EligibilityCriteria() {
                 fontFamily: "inherit",
                 color: colors.gray,
                 textAlign: "center",
-                fontSize: 12,
+                fontSize: 13,
               }}
             >
               {item.text}

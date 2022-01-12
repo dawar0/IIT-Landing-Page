@@ -97,7 +97,7 @@ export default function Header() {
               </p>
             </Typography>
             <Box sx={{ alignSelf: matches ? "flex-start" : "center" }}>
-              <Button onClick={() => setOpen(true)}>DOWNLOAD BROCHURE</Button>
+              <Button onClick={() => setOpen(true)}>APPLY NOW</Button>
             </Box>
           </Box>
         </Grid>

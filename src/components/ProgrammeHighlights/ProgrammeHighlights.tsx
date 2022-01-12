@@ -1,7 +1,6 @@
 import { Box, Grid, Typography } from "@mui/material";
 import SingleHighlight from "./SingleHighlight";
 import { colors } from "../../assets/images/colors";
-import demoImage from "../../assets/images/demo.png";
 import ComprehensiveLearningImage from "../../assets/images/ComprehensiveLearning.png";
 import FlexibleCurriculumImage from "../../assets/images/FlexibleCurriculum.png";
 import AlumniStatusImage from "../../assets/images/AlumniStatus.png";

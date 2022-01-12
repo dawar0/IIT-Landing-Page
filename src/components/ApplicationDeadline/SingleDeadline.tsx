@@ -43,9 +43,6 @@ export default function SingleDeadline({
           <br />
           {additionalText}
         </Typography>
-        {/* <Typography sx={{ fontSize: "small", color: colors.gray }}>
-          {additionalText}<br>
-        </Typography> */}
       </Box>
     </Grid>
   );

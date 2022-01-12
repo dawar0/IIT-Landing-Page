@@ -4,6 +4,7 @@ import { Grid } from "@mui/material";
 import SingleDeadline from "./SingleDeadline";
 
 import { colors } from "../../assets/images/colors";
+import { dateString } from "../Date";
 export default function ApplicationDeadline() {
   let deadlines = [
     { title: "2 Years", helperText: "Course Duration", addititonalText: "" },
@@ -18,7 +19,7 @@ export default function ApplicationDeadline() {
       additionalText: "(GST and Registration Extra)",
     },
     {
-      title: "9th January '22",
+      title: dateString,
       helperText: "Deadline to Apply",
     },
   ];

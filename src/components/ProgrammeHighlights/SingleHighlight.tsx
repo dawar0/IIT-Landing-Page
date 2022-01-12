@@ -1,4 +1,4 @@
-import { Grid, Box, Typography } from "@mui/material";
+import { Grid, Typography } from "@mui/material";
 import { colors } from "../../assets/images/colors";
 
 interface Highlight {
@@ -25,7 +25,7 @@ export default function SingleHighlight({ title, text, image }: Highlight) {
         {title}
       </Typography>
       <Typography
-        sx={{ fontFamily: "inherit", color: colors.gray, fontSize: "small" }}
+        sx={{ fontFamily: "inherit", color: colors.gray, fontSize: 13 }}
       >
         {text}
       </Typography>

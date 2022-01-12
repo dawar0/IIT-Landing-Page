@@ -26,7 +26,8 @@ function SingleBenefit({ items, size }: SingleBenefitInterface) {
         sx={{
           fontFamily: "inherit",
           // p: 2,
-          fontSize: 12,
+          fontSize: 13,
+
           // fontWeight: 600,
           color: colors.white,
         }}
