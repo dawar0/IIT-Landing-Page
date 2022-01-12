@@ -43,7 +43,7 @@ export default function AdvanceYourCareer() {
         </Typography>
         <Box sx={{ justifyContent: "center", display: "flex", py: 3 }}>
           <Button onClick={() => setOpen(true)} variant="contained">
-            DOWNLOAD BROCHURE
+            APPLY NOW
           </Button>
         </Box>
       </Box>
