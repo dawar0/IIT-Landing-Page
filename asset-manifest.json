@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/IIT-Landing-Page/static/css/main.b7cf491f.css",
-    "main.js": "/IIT-Landing-Page/static/js/main.ad511ee8.js",
+    "main.js": "/IIT-Landing-Page/static/js/main.cf0818e1.js",
     "static/js/787.444fca95.chunk.js": "/IIT-Landing-Page/static/js/787.444fca95.chunk.js",
     "static/media/Background.png": "/IIT-Landing-Page/static/media/Background.c18d1a167cfcfaacc626.png",
     "static/media/logo.png": "/IIT-Landing-Page/static/media/logo.783266bdd3f640fdfee1.png",
@@ -21,11 +21,11 @@
     "static/media/executives.svg": "/IIT-Landing-Page/static/media/executives.ed2f4e98cd6a23e6ca4be236c624eaec.svg",
     "index.html": "/IIT-Landing-Page/index.html",
     "main.b7cf491f.css.map": "/IIT-Landing-Page/static/css/main.b7cf491f.css.map",
-    "main.ad511ee8.js.map": "/IIT-Landing-Page/static/js/main.ad511ee8.js.map",
+    "main.cf0818e1.js.map": "/IIT-Landing-Page/static/js/main.cf0818e1.js.map",
     "787.444fca95.chunk.js.map": "/IIT-Landing-Page/static/js/787.444fca95.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.b7cf491f.css",
-    "static/js/main.ad511ee8.js"
+    "static/js/main.cf0818e1.js"
   ]
 }
