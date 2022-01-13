@@ -1,10 +1,10 @@
 import React from "react";
 import { Box, Grid, Typography, useMediaQuery } from "@mui/material";
 import { colors } from "../../assets/images/colors";
-import entrepreneurs from "../../assets/images/entrepreneurs.png";
-import executives from "../../assets/images/executives.png";
-import juniorExecutives from "../../assets/images/juniorExecutives.png";
-import graduates from "../../assets/images/graduates.png";
+import entrepreneurs from "../../assets/images/entrepreneurs.svg";
+import executives from "../../assets/images/executives.svg";
+import juniorExecutives from "../../assets/images/juniorExecutives.svg";
+import graduates from "../../assets/images/graduates.svg";
 import { Title } from "./Misc";
 
 const criteria = [
@@ -40,7 +40,6 @@ export default function EligibilityCriteria() {
             item
             xs={6}
             sx={{
-              justifyContent: "center",
               alignItems: "center",
               display: "flex",
               flexDirection: "column",

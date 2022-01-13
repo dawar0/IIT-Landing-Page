@@ -1,9 +1,9 @@
 import { Image, Title } from "./Misc";
 import { Grid, Box } from "@mui/material";
 import line from "../../assets/images/line.png";
-import application from "../../assets/images/application.png";
-import test from "../../assets/images/test.png";
-import personalInterview from "../../assets/images/personalInterview.png";
+import application from "../../assets/images/application.svg";
+import test from "../../assets/images/test.svg";
+import personalInterview from "../../assets/images/personalInterview.svg";
 import { colors } from "../../assets/images/colors";
 export default function ApplicationProcess() {
   return (

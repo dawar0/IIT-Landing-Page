@@ -1,12 +1,12 @@
 import { Box, Grid, Typography } from "@mui/material";
 import SingleHighlight from "./SingleHighlight";
 import { colors } from "../../assets/images/colors";
-import ComprehensiveLearningImage from "../../assets/images/ComprehensiveLearning.png";
-import FlexibleCurriculumImage from "../../assets/images/FlexibleCurriculum.png";
-import AlumniStatusImage from "../../assets/images/AlumniStatus.png";
-import RemoteLearningImage from "../../assets/images/RemoteLearning.png";
-import RobustPedagogyImage from "../../assets/images/RobustPedagogy.png";
-import BlendedLearningImage from "../../assets/images/BlendedLearning.png";
+import ComprehensiveLearningImage from "../../assets/images/ComprehensiveLearning.svg";
+import FlexibleCurriculumImage from "../../assets/images/FlexibleCurriculum.svg";
+import AlumniStatusImage from "../../assets/images/AlumniStatus.svg";
+import RemoteLearningImage from "../../assets/images/RemoteLearning.svg";
+import RobustPedagogyImage from "../../assets/images/RobustPedagogy.svg";
+import BlendedLearningImage from "../../assets/images/BlendedLearning.svg";
 
 export default function ProgrammeHighlights() {
   const highlights = [
