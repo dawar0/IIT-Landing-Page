@@ -100,18 +100,26 @@ export default function Header() {
                 Open
               </p>
             </Typography>
+
             <Box
               ref={buttonRef}
               sx={{
-                alignSelf: matches ? "flex-start" : "center",
-                // display: matches ? "block" :"sticky",
-                position: buttonSticky && !matches ? "fixed" : "relative",
-                p: 1,
-                top: "0",
-                zIndex: 99,
+                width: "100%",
+                display: "flex",
+                justifyContent: matches ? "flex-start" : "center",
               }}
             >
-              <Button onClick={() => setOpen(true)}>APPLY NOW</Button>
+              <Box
+                sx={{
+                  alignSelf: matches ? "flex-start" : "center",
+                  position: buttonSticky && !matches ? "fixed" : "relative",
+                  p: buttonSticky && !matches ? 1 : 0,
+                  top: "0",
+                  zIndex: 99,
+                }}
+              >
+                <Button onClick={() => setOpen(true)}>APPLY NOW</Button>
+              </Box>
             </Box>
           </Box>
         </Grid>
