@@ -48,7 +48,7 @@ export default function ApplicationProcess() {
               justifyContent: "center",
             }}
           >
-            <img src={line} alt={"line"} style={{ width: 50 }} />
+            <img src={line} alt={"line"} style={{ width: 50, height: 50 }} />
           </Box>
         </Grid>
         <Grid item xs={2}>

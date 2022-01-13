@@ -55,7 +55,11 @@ export default function EligibilityCriteria() {
                 borderColor: colors.gray,
               }}
             >
-              <img src={item.img} alt={item.title} style={{ width: 50 }} />
+              <img
+                src={item.img}
+                alt={item.title}
+                style={{ width: 50, height: 50 }}
+              />
             </Box>
             <Typography
               sx={{
