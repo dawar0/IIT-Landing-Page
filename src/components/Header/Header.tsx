@@ -32,8 +32,9 @@ export default function Header() {
         sx={{
           backgroundImage: `url(${BackgroundImage})`,
           height: matches ? "100vh" : "70vh",
-          backgroundSize: "cover",
-          backgroundPosition: "70% 50%",
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "45%",
+          backgroundPosition: "10% 70% ",
           display: "flex",
         }}
       >
@@ -46,7 +47,8 @@ export default function Header() {
             />
             <Typography
               sx={{
-                color: matches ? colors.white : "#000000",
+                // color: matches ? colors.white : "#000000",
+                color: colors.gray,
                 fontFamily: "inherit",
                 fontSize: "small",
                 fontWeight: "bold",
