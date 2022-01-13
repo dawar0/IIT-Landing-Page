@@ -30,7 +30,7 @@ export default function Header() {
       <Grid
         container
         sx={{
-          backgroundImage: `url(${BackgroundImage})`,
+          backgroundImage: matches ? `url(${BackgroundImage})` : "none",
           height: matches ? "100vh" : "70vh",
           backgroundRepeat: "no-repeat",
           backgroundSize: "45%",
@@ -83,6 +83,21 @@ export default function Header() {
             >
               2 Year MBA in Analytics for Working Professionals
             </Typography>
+            {!matches && (
+              <Box
+                sx={{
+                  alignContent: "center",
+                  display: "grid",
+                  justifyContent: "center",
+                }}
+              >
+                <img
+                  src={BackgroundImage}
+                  alt={"Background Image"}
+                  style={{ width: 300 }}
+                />
+              </Box>
+            )}
             <Typography
               sx={{
                 fontFamily: "inherit",

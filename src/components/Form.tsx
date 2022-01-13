@@ -87,7 +87,6 @@ export default function Form({ open, setOpen }: FormInterface) {
         fetch(PDFLocation);
       });
     }
-    console.log(errorObject);
   };
 
   const handleChange = (e: any) => {
@@ -118,9 +117,7 @@ export default function Form({ open, setOpen }: FormInterface) {
     "Hyderabad",
     "Others",
   ];
-  React.useEffect(() => {
-    console.log(formObject.phone?.length);
-  }, [formObject]);
+
   return (
     <Dialog open={open}>
       <Grid
