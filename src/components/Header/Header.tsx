@@ -10,6 +10,21 @@ import Form from "../Form";
 export default function Header() {
   const matches = useMediaQuery("(min-width:600px)");
   const [open, setOpen] = React.useState(false);
+  const [buttonSticky, setButtonSticky] = React.useState(false);
+  const buttonRef = React.useRef(null);
+  function handleScroll() {
+    // @ts-ignore: Object is possibly 'null'.
+    var sticky = buttonRef?.current.offsetTop;
+    if (window.pageYOffset > sticky) {
+      setButtonSticky(true);
+    } else {
+      setButtonSticky(false);
+    }
+  }
+  React.useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
   return (
     <>
       <Grid
@@ -59,23 +74,12 @@ export default function Header() {
               sx={{
                 fontFamily: "inherit",
                 color: colors.darkBlue,
-                fontWeight: 600,
-                fontSize: "medium",
-                textAlign: matches ? "left" : "center",
-              }}
-            >
-              IIM Kashipur Offers
-            </Typography>
-            <Typography
-              sx={{
-                fontFamily: "inherit",
-                color: colors.darkBlue,
                 fontWeight: 700,
                 fontSize: "x-large",
                 textAlign: matches ? "left" : "center",
               }}
             >
-              EXECUTIVE MASTER OF BUSINESS ADMINISTRATION (ANALYTICS)
+              2 Year MBA in Analytics for Working Professionals
             </Typography>
             <Typography
               sx={{
@@ -96,7 +100,17 @@ export default function Header() {
                 Open
               </p>
             </Typography>
-            <Box sx={{ alignSelf: matches ? "flex-start" : "center" }}>
+            <Box
+              ref={buttonRef}
+              sx={{
+                alignSelf: matches ? "flex-start" : "center",
+                // display: matches ? "block" :"sticky",
+                position: buttonSticky && !matches ? "fixed" : "relative",
+                p: 1,
+                top: "0",
+                zIndex: 99,
+              }}
+            >
               <Button onClick={() => setOpen(true)}>APPLY NOW</Button>
             </Box>
           </Box>

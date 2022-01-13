@@ -9,10 +9,14 @@ import {
   TextField,
   MenuItem,
   IconButton,
+  Checkbox,
+  FormControlLabel,
 } from "@mui/material";
 
 import { API, PDFLocation } from "./API";
 import CloseIcon from "@mui/icons-material/Close";
+
+import { colors } from "../assets/images/colors";
 interface FormInterface {
   open: any;
   setOpen: any;
@@ -35,6 +39,8 @@ export default function Form({ open, setOpen }: FormInterface) {
     experience: null,
   };
   const [formObject, setFormObject] = React.useState(formObjectInitial);
+  const [checked, setChecked] = React.useState(false);
+  const [checkError, setCheckError] = React.useState(false);
   const [emailValid, setEmailValid] = React.useState(true);
   const [phoneValid, setPhoneValid] = React.useState(true);
 
@@ -67,6 +73,10 @@ export default function Form({ open, setOpen }: FormInterface) {
       setPhoneValid(false);
       setErrorObject({ ...errorObject, ...tempError });
     }
+    if (!checked) {
+      flag = false;
+      setCheckError(true);
+    }
     if (flag) {
       const requestOptions = {
         method: "POST",
@@ -98,17 +108,15 @@ export default function Form({ open, setOpen }: FormInterface) {
     }
   };
 
-  const experience = [
-    "<1 Years",
-    "2-3 Years",
-    "3-4 Years",
-    "4-5 Years",
-    "5-6 Years",
-    "6-7 Years",
-    "7-8 Years",
-    "8-9 Years",
-    "9-10 Years",
-    ">10 Years",
+  const experience = ["5-10 Years", "10-15 Years", "15+ Years"];
+  const cities = [
+    "Mumbai",
+    "Delhi NCR",
+    "Banglore",
+    "Kolkata",
+    "Chennai",
+    "Hyderabad",
+    "Others",
   ];
   React.useEffect(() => {
     console.log(formObject.phone?.length);
@@ -183,7 +191,6 @@ export default function Form({ open, setOpen }: FormInterface) {
           </Box>
           <Box sx={{ p: 1 }}>
             <TextField
-              autoComplete="address-level2"
               label="City"
               name="city"
               value={formObject?.city}
@@ -191,7 +198,14 @@ export default function Form({ open, setOpen }: FormInterface) {
               onChange={handleChange}
               variant="outlined"
               fullWidth
-            />
+              select
+            >
+              {cities.map((option: any) => (
+                <MenuItem value={option} key={option}>
+                  {option}
+                </MenuItem>
+              ))}
+            </TextField>
           </Box>
           <Box sx={{ p: 1 }}>
             <TextField
@@ -210,6 +224,20 @@ export default function Form({ open, setOpen }: FormInterface) {
                 </MenuItem>
               ))}
             </TextField>
+          </Box>
+          <Box sx={{ p: 1 }}>
+            <FormControlLabel
+              sx={{ color: checkError ? "red" : colors.gray }}
+              control={
+                <Checkbox checked={checked} onChange={() => setChecked(true)} />
+              }
+              label="You agree to our terms and conditions and our Privacy Policy. "
+            />
+            <Typography sx={{ color: colors.gray }}>
+              Disclaimer:By submitting my contact details here, I override my
+              NDNC registration and authorise TimesTSW and its authorised
+              representatives to contact me.
+            </Typography>
           </Box>
           <Box sx={{ display: "flex", justifyContent: "center", p: 1 }}>
             <Button onClick={handleSubmit}>DOWNLOAD BROCHURE</Button>
