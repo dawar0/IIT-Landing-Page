@@ -227,13 +227,21 @@ export default function Form({ open, setOpen }: FormInterface) {
           </Box>
           <Box sx={{ p: 1 }}>
             <FormControlLabel
-              sx={{ color: checkError ? "red" : colors.gray }}
               control={
                 <Checkbox checked={checked} onChange={() => setChecked(true)} />
               }
-              label="You agree to our terms and conditions and our Privacy Policy. "
+              label={
+                <Typography
+                  sx={{
+                    color: checkError ? "red" : colors.gray,
+                    fontSize: "small",
+                  }}
+                >
+                  You agree to our terms and conditions and our Privacy Policy.{" "}
+                </Typography>
+              }
             />
-            <Typography sx={{ color: colors.gray }}>
+            <Typography sx={{ pt: 1, color: colors.gray, fontSize: "small" }}>
               Disclaimer:By submitting my contact details here, I override my
               NDNC registration and authorise TimesTSW and its authorised
               representatives to contact me.
