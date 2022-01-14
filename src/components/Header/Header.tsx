@@ -93,7 +93,7 @@ export default function Header() {
               >
                 <img
                   src={BackgroundImage}
-                  alt={"Background Image"}
+                  alt={"Background"}
                   style={{ width: 300 }}
                 />
               </Box>

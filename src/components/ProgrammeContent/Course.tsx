@@ -29,7 +29,7 @@ const SingleItem = ({ item }: any) => {
           <div
             style={{
               display: "block",
-              marginTop: "10%",
+              marginTop: "4px",
               background: colors.darkBlue,
               height: "4px",
               width: "80%",
