@@ -225,7 +225,10 @@ export default function Form({ open, setOpen }: FormInterface) {
           <Box sx={{ p: 1 }}>
             <FormControlLabel
               control={
-                <Checkbox checked={checked} onChange={() => setChecked(true)} />
+                <Checkbox
+                  checked={checked}
+                  onChange={() => setChecked(!checked)}
+                />
               }
               label={
                 <Typography
