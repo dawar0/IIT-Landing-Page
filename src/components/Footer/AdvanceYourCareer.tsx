@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import { Grid, Box, Typography, Button } from "@mui/material";
+import { Grid, Box, Typography, Button, useMediaQuery } from "@mui/material";
 
 import Form from "../Form";
 
@@ -8,6 +8,7 @@ import { Title } from "./Misc";
 import { colors } from "../../assets/images/colors";
 
 export default function AdvanceYourCareer() {
+  const matches = useMediaQuery("(min-width:600px)");
   const [open, setOpen] = useState(false);
   return (
     <>
@@ -42,9 +43,11 @@ export default function AdvanceYourCareer() {
           EXECUTIVE MASTER OF BUSINESS ADMINISTRATION (ANALYTICS){" "}
         </Typography>
         <Box sx={{ justifyContent: "center", display: "flex", py: 3 }}>
-          <Button onClick={() => setOpen(true)} variant="contained">
-            APPLY NOW
-          </Button>
+          {matches && (
+            <Button onClick={() => setOpen(true)} variant="contained">
+              APPLY NOW
+            </Button>
+          )}
         </Box>
       </Box>
       <Form open={open} setOpen={setOpen} />
