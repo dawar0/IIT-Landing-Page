@@ -33,12 +33,16 @@ export default function Description() {
               fontFamily: "inherit",
             }}
           >
-            IIM Lucknow’s Accelerated Management Programme for Executives (AMPE)
-            is a uniquely designed, fast-track management programme to prepare
-            aspiring leaders for the multifaceted challenges of today’s dynamic
-            business environment. Through a comprehensive and personalised
-            learning journey, AMPE allows working professionals to build
-            future-ready capabilities and develop a growth mindset.
+            The two-year Executive MBA in Analytics (EMBAA) degree by IIM
+            Kashipur prepares participants to become business leaders who
+            harness the power of analytics to improve organisational processes.
+            The programme trains learners in the emerging and interdisciplinary
+            areas of analytics, technology and management through
+            cross-functional academic and practical learning. IIM Kashipur’s
+            EMBAA follows a tried, tested and proven pedagogy that is a blend of
+            lectures, case studies, white papers, lecture discussions,
+            behavioural and computer-based simulations, projects, assignments,
+            class presentations, quizzes, et al.
           </Typography>
         </Box>
       </Grid>

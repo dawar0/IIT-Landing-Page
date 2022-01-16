@@ -9,7 +9,7 @@ export default function ApplicationDeadline() {
   let deadlines = [
     { title: "2 Years", helperText: "Course Duration", addititonalText: "" },
     {
-      title: "2 / Week",
+      title: "2 Days/Week",
       helperText: "Saturdays, Sundays",
       additionalText: " 9:15AM - 5:30PM",
     },
