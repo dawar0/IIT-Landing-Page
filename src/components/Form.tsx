@@ -14,12 +14,16 @@ import {
 } from "@mui/material";
 
 import CloseIcon from "@mui/icons-material/Close";
-
-//@ts-expect-error
-import gtag, { install } from "ga-gtag";
+import TagManager from "react-gtm-module";
 
 import { colors } from "../assets/images/colors";
-install("AW-407049191");
+
+const tagManagerArgs = {
+  gtmId: 'AW-407049191'
+}
+
+TagManager.initialize(tagManagerArgs);
+
 interface FormInterface {
   open: any;
   setOpen: any;
@@ -93,9 +97,9 @@ export default function Form({ open, setOpen }: FormInterface) {
       fetch(formPostEnd, requestOptions).then((e) => {
         setFormObject(formObjectInitial);
         setOpen(false);
-        gtag("event", "conversion", {
-          send_to: "AW-407049191/B45MCMDA54sDEOenjMIB",
-        });
+        
+        TagManager.dataLayer({ dataLayer: { event: 'conversion', send_to: 'AW-407049191/B45MCMDA54sDEOenjMIB' } });
+
         window.open(
           "https://timestsw.com/wp-content/uploads/2021/11/IIM_Kashipur_EMBAA-Brochure.pdf",
           "_blank"
