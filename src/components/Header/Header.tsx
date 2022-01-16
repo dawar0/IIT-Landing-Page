@@ -75,7 +75,7 @@ export default function Header() {
                 textAlign: matches ? "left" : "center",
               }}
             >
-              EXECUTIVE MASTER OF BUSINESS ADMINISTRATION (ANALYTICS)
+              2 Year Executive MBA in Analytics for Working Professionals
             </Typography>
             <Typography
               sx={{
