@@ -69,7 +69,9 @@ export default function Benefits() {
       </Grid>
       <Grid container item xs={10} sx={{ display: matches ? "flex" : "none" }}>
         {benefits.map((item) => (
-          <SingleBenefit items={item} size={4} />
+          <React.Fragment key={item}>
+            <SingleBenefit items={item} size={4} />
+          </React.Fragment>
         ))}
       </Grid>
       <Grid item container xs={12} sx={{ display: matches ? "none" : "block" }}>

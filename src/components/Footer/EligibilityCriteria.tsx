@@ -36,51 +36,53 @@ export default function EligibilityCriteria() {
       <Title>ELIGIBILITY CRITERIA</Title>
       <Grid item container>
         {criteria.map((item) => (
-          <Grid
-            item
-            xs={6}
-            sx={{
-              alignItems: "center",
-              display: "flex",
-              flexDirection: "column",
-              px: matches ? 5 : 1,
-              py: 2,
-            }}
-          >
-            <Box
+          <React.Fragment key={item.text}>
+            <Grid
+              item
+              xs={6}
               sx={{
-                p: 1,
-                borderRadius: "50%",
-                border: "3px solid",
-                borderColor: colors.gray,
+                alignItems: "center",
+                display: "flex",
+                flexDirection: "column",
+                px: matches ? 5 : 1,
+                py: 2,
               }}
             >
-              <img
-                src={item.img}
-                alt={item.title}
-                style={{ width: 50, height: 50 }}
-              />
-            </Box>
-            <Typography
-              sx={{
-                fontFamily: "inherit",
-                color: colors.gray,
-                fontWeight: "bold",
-              }}
-            >
-              {item.title}
-            </Typography>
-            <Typography
-              sx={{
-                fontFamily: "inherit",
-                color: colors.gray,
-                textAlign: "center",
-                fontSize: 13,
-              }}
-            >
-              {item.text}
-            </Typography>
-          </Grid>
+              <Box
+                sx={{
+                  p: 1,
+                  borderRadius: "50%",
+                  border: "3px solid",
+                  borderColor: colors.gray,
+                }}
+              >
+                <img
+                  src={item.img}
+                  alt={item.title}
+                  style={{ width: 50, height: 50 }}
+                />
+              </Box>
+              <Typography
+                sx={{
+                  fontFamily: "inherit",
+                  color: colors.gray,
+                  fontWeight: "bold",
+                }}
+              >
+                {item.title}
+              </Typography>
+              <Typography
+                sx={{
+                  fontFamily: "inherit",
+                  color: colors.gray,
+                  textAlign: "center",
+                  fontSize: 13,
+                }}
+              >
+                {item.text}
+              </Typography>
+            </Grid>
+          </React.Fragment>
         ))}
       </Grid>
     </Box>

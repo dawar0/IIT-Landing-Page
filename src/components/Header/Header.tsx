@@ -130,12 +130,16 @@ export default function Header() {
                 sx={{
                   alignSelf: matches ? "flex-start" : "center",
                   position: buttonSticky && !matches ? "fixed" : "relative",
+
                   p: buttonSticky && !matches ? 1 : 0,
-                  top: "0",
+                  top: buttonSticky && !matches ? "93vh" : "0",
                   zIndex: 99,
+                  width: buttonSticky && !matches ? "60vw" : "auto",
                 }}
               >
-                <Button onClick={() => setOpen(true)}>APPLY NOW</Button>
+                <Button fullWidth onClick={() => setOpen(true)}>
+                  APPLY NOW
+                </Button>
               </Box>
             </Box>
           </Box>

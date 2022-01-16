@@ -13,14 +13,21 @@ import {
   FormControlLabel,
 } from "@mui/material";
 
-import { API, PDFLocation } from "./API";
 import CloseIcon from "@mui/icons-material/Close";
 
+//@ts-expect-error
+import gtag, { install } from "ga-gtag";
+
 import { colors } from "../assets/images/colors";
+install("AW-407049191");
 interface FormInterface {
   open: any;
   setOpen: any;
 }
+// -----------------------
+// Enter the URL where api is hosted
+const formPostEnd = "http://localhost:8000/";
+// -----------------------
 export default function Form({ open, setOpen }: FormInterface) {
   const errorObjectInitial: { [key: string]: any } = {
     name: false,
@@ -83,8 +90,16 @@ export default function Form({ open, setOpen }: FormInterface) {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formObject),
       };
-      fetch(API, requestOptions).then((e) => {
-        fetch(PDFLocation);
+      fetch(formPostEnd, requestOptions).then((e) => {
+        setFormObject(formObjectInitial);
+        setOpen(false);
+        gtag("event", "conversion", {
+          send_to: "AW-407049191/B45MCMDA54sDEOenjMIB",
+        });
+        window.open(
+          "https://timestsw.com/wp-content/uploads/2021/11/IIM_Kashipur_EMBAA-Brochure.pdf",
+          "_blank"
+        );
       });
     }
   };
